@@ -1,11 +1,30 @@
 package dev.ranieri.entities;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
+@Entity
+@Table(name ="book")
 public class Book {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name ="b_id")
 	private int id;	
-	private String title;	
+	
+	@Column(name ="title")
+	@NotNull
+	private String title;
+	
+	@Column(name ="author")
+	@NotNull
 	private String author;
+	
+	@Column(name ="pages")
+	@NotNull
 	private int pages;
+	
+	@Column(name ="genre")
 	private String genre;
 	
 	public Book() {

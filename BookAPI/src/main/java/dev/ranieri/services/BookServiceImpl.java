@@ -90,7 +90,7 @@ public class BookServiceImpl implements BookService {
 
 	}
 
-	public Book updateBook(Book book) throws BookNotFoundException {
+	public Book updateBook(Book book) {
 
 		if(book != null) {
 			Book btest = bdao.getBookById(book.getId());

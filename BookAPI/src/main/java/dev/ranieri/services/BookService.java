@@ -19,7 +19,7 @@ public interface BookService {
 	Set<Book> getBooksByLength(String order);
 	
 	//Update
-	Book updateBook(Book book) throws BookNotFoundException;
+	Book updateBook(Book book);
 	
 	//Delete
 	boolean deleteBook(Book book);

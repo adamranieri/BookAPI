@@ -7,6 +7,8 @@ import java.util.TreeSet;
 
 import dev.ranieri.daos.BookDAO;
 import dev.ranieri.entities.Book;
+import dev.ranieri.exceptions.BookNotFoundException;
+
 
 public class BookServiceImpl implements BookService {
 
@@ -89,7 +91,19 @@ public class BookServiceImpl implements BookService {
 	}
 
 	public Book updateBook(Book book) {
-		return this.bdao.updateBook(book);
+
+		if(book != null) {
+			Book btest = bdao.getBookById(book.getId());
+			if (btest == null) {
+				throw new BookNotFoundException();
+			} else {
+				return this.bdao.updateBook(book);
+			}		
+		} else {
+			throw new BookNotFoundException();
+		}
+		
+
 	}
 
 	public boolean deleteBook(Book book) {

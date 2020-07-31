@@ -3,6 +3,7 @@ package dev.ranieri.services;
 import java.util.Set;
 
 import dev.ranieri.entities.Book;
+import dev.ranieri.exceptions.BookNotFoundException;
 
 public interface BookService {
 	

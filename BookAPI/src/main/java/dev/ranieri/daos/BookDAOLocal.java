@@ -25,7 +25,7 @@ public class BookDAOLocal implements BookDAO{
 	}
 
 	public Book updateBook(Book book) {
-		book_table.put(book.getId(), book);
+		book_table.put(book.getId(), book);		
 		return book;
 	}
 

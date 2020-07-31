@@ -3,6 +3,7 @@ package dev.ranieri.services;
 import java.util.Set;
 
 import dev.ranieri.entities.Book;
+import dev.ranieri.exceptions.BookNotFoundException;
 
 public interface BookService {
 	
@@ -18,7 +19,7 @@ public interface BookService {
 	Set<Book> getBooksByLength(String order);
 	
 	//Update
-	Book updateBook(Book book);
+	Book updateBook(Book book) throws BookNotFoundException;
 	
 	//Delete
 	boolean deleteBook(Book book);

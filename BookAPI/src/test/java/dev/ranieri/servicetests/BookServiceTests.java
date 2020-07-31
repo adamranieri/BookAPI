@@ -12,6 +12,7 @@ import org.mockito.Mockito;
 
 import dev.ranieri.daos.BookDAO;
 import dev.ranieri.entities.Book;
+import dev.ranieri.exceptions.BookNotFoundException;
 import dev.ranieri.services.BookService;
 import dev.ranieri.services.BookServiceImpl;
 
@@ -80,6 +81,26 @@ class BookServiceTests {
 			pages = b.getPages();
 		}
 		
+	}
+	
+	@Test
+	void testBookNotFoundException() {
+		Exception e = assertThrows(BookNotFoundException.class, ()-> {
+			Book b = null;
+			bserv.updateBook(b);
+		});
+		
+		Assertions.assertEquals("Book not found. Please try again.", e.getMessage());
+	}
+	
+	@Test
+	void testBookNotFoundExceptionNegative() {
+		Exception e = assertThrows(BookNotFoundException.class, ()-> {
+			Book b = new Book(0,"The Two Towers","Tolkien",340,"Adventure");
+			bserv.updateBook(b);
+		});
+		
+		Assertions.assertEquals("Book not found. Please try again.", e.getMessage());
 	}
 	
 }

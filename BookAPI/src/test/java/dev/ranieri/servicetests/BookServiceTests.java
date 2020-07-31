@@ -46,7 +46,7 @@ class BookServiceTests {
 	@Test
 	void sortByAuthor() {
 		Set<Book> books = this.bserv.getBooksByAuthor("Tolkien");
-		Assertions.assertEquals(3, books.size());
+		Assertions.assertEquals(4, books.size());
 	}
 	
 	@Test

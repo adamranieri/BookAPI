@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: dev.ranieri.servicetests.BookServiceTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.787 s <<< FAILURE! - in dev.ranieri.servicetests.BookServiceTests
+dev.ranieri.servicetests.BookServiceTests.sortByLengthDescending  Time elapsed: 0.738 s  <<< ERROR!
+java.lang.NullPointerException
+	at dev.ranieri.servicetests.BookServiceTests.sortByLengthDescending(BookServiceTests.java:76)
+
+dev.ranieri.servicetests.BookServiceTests.sortByLengthAscending  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException
+	at dev.ranieri.servicetests.BookServiceTests.sortByLengthAscending(BookServiceTests.java:63)
+
+dev.ranieri.servicetests.BookServiceTests.sortByAuthor  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException
+	at dev.ranieri.servicetests.BookServiceTests.sortByAuthor(BookServiceTests.java:49)
+
+dev.ranieri.servicetests.BookServiceTests.sortByGenre  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException
+	at dev.ranieri.servicetests.BookServiceTests.sortByGenre(BookServiceTests.java:55)
+

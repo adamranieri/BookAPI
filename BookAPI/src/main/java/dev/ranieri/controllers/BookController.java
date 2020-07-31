@@ -51,7 +51,10 @@ public class BookController {
 	
 	//DELETE
 	public Handler deleteBook = (ctx)->{
-		
+		int id = Integer.parseInt(ctx.pathParam("id"));
+		Book book = this.bserv.getBookById(id);
+		Boolean success = this.bserv.deleteBook(book);
+		ctx.result(success.toString());
 	};
 
 }

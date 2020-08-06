@@ -1,7 +1,0 @@
-dev\ranieri\daos\BookDAO.class
-dev\ranieri\services\BookServiceImpl.class
-dev\ranieri\entities\Book.class
-dev\ranieri\daos\BookDAOLocal.class
-dev\ranieri\services\BookService.class
-dev\ranieri\app\App.class
-dev\ranieri\controllers\BookController.class
